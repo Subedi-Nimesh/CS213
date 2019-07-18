@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Piano Festival</title>
+		<script type="text/javascript">
+			var request;
+			function changeDuet(value) {
+				if(value == "duet") {
+					document.getElementById("duet").style.display = "block";
+				}
+				else
+					document.getElementById("duet").style.display = "none";
+			}
+
+			function importURL() {
+				var url = "http://157.201.194.254/~nsubedi/assign12.txt";
+				request = new XMLHttpRequest();
+				request.onreadystatechange = alertContents;
+				request.open('GET', url, true);
+				request.send();
+			}
+
+			function saveFile(){
+				var txt = document.getElementById("result").innerHTML;
+				var data = new FormData();
+				data.append("data", txt);
+				var xhr = new XMLHttpRequest;
+				xhr.open('post', "assign12.php", true);
+				xhr.send(data);
+			}
+
+			function validate() {
+				var error = false;
+
+				if (document.getElementById("fName1").value == "")
+				{
+					alert("Enter your First Name.");
+					error = true;
+				}
+		
+				else if (document.getElementById("lName1").value == "")
+				{
+					alert("Enter your Last Name.");
+					error = true;
+				}
+		
+				else if (document.getElementById("studentID1").value == "")
+				{
+					alert("Enter your Student ID.");
+					error = true;
+				}
+
+				else if (document.getElementById("room").value == "")
+				{
+					alert("Enter your Room Number.");
+					error = true;
+				}
+				
+				return error;
+			}
+
+
+			function alertContents() 
+			{
+				if (this.readyState == 4)
+				{ 
+					if (this.status == 200)
+					{
+						if (request.responseText != null) {
+							var myObj = JSON.parse(request.responseText);
+
+							var list = "<table><tr><th>First Name</th><th>Last Name</th><th>Student ID</th><th>Location</th><th>Room Number</th><th>Skill Level</th><th>Instrument</th><th>Time</th></tr>\n";
+
+							for (var i = 0; i < myObj.length; i++)
+							{
+								list = list + "<tr><td>" + myObj[i].fName1 + "</td>"
+												+ "<td>" + myObj[i].lName1 + "</td>"
+												+ "<td>" + myObj[i].studentID1 + "</td> "
+												+ "<td>" + myObj[i].building + "</td>" 
+												+ "<td>" + myObj[i].room + "</td>" 
+												+ "<td>" + myObj[i].level + "</td>"
+												+ "<td>" + myObj[i].instrument + "</td>"
+												+ "<td>" + myObj[i].time + "</td>"
+												+ "</tr><br>";
+							}
+
+							list += "</table>";
+
+							document.getElementById("display").innerHTML = list;
+						}
+					}
+					else 
+					{
+						alert('Error detected.');
+					}
+				}
+			}
+
+			function registerStudent() {
+				if (!validate()) {
+					importURL();
+				} else {
+					return;
+				}
+			}
+
+		</script>
+	
+		<style>
+			select {
+				max-width: 90%;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Audition for Piano Festival</h1>
+
+		Type of performance:
+		<select style="font-size:16px" name="type" onchange="changeDuet(this.value)">
+			<option value="solo">Solo</option>
+			<option value="duet">Duet</option>
+			<option value="concerto">Concerto</option>
+		</select><br>
+
+		<h3>Performance Detail:</h3>
+		<form>
+			<table border="2" width="30%">
+				<tr>
+					<td>First Name:</td> 
+					<td><input type="text" id="fName1" name="fName1" required="required"></td>
+				</tr>
+				<tr>
+					<td>Last Name:</td>
+					<td><input type="text" id="lName1" name="lName1" required="required"></td>
+				</tr>
+				<tr>
+					<td>Student ID:</td>
+					<td><input type="text" id="studentID1" name="studentID1" maxlength="9" size="9" required="required"></td>
+				</tr>
+			</table>
+			<table border="2" width="30%" id="duet" style="display: none">
+				<tr>
+					<td>First Name:</td>
+					<td><input type="text" id="fName2" name="fName2" required="required"></td>
+				</tr>
+				<tr>
+					<td>Last Name:</td>
+					<td><input type="text" id="lName2" name="lName2" required="required"></td>
+				</tr>
+				<tr>
+					<td>Student ID:</td>
+					<td><input type="text" id="studentID2" name="studentID2" maxlength="9" size="9" required="required"></td>
+				</tr>
+			</table>
+
+			<table border="2" width="30%">
+				<tr>
+					<td>Location:</td>
+					<td>
+						<select style="font-size:16px" id="building" name="building">
+							<option>Austin Building</option>
+							<option>Benson Building</option>
+							<option>Clarke Building</option>
+							<option>Hart Building</option>
+							<option>Hinckley Building</option>
+							<option>Kimball Building</option>
+							<option>Kirkham Building</option>
+							<option>Manwaring Center</option>
+							<option>McKay Library</option>
+							<option>Ricks Building</option>
+							<option>Romney Building</option>
+							<option>Smith Building</option>
+							<option>Snow Building</option>
+							<option>Spori Building</option>
+							<option>Science & Tech. Building</option>
+							<option>Taylor Building</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Room Number:</td>
+					<td><input type="text" id="room" name="room" maxlength="3" size="3" required="required"></td>
+				</tr>
+				<tr>
+					<td>Skill Level:</td>
+					<td>
+						<select id="level" name="level">
+							<option>Beginner</option>
+							<option>Intermediate</option>
+							<option>Pre-advanced</option>
+							<option>Advanced</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Instrument:</td>
+					<td>
+						<select id="instrument" name="instrument">
+							<option>Voice</option>
+							<option>Piano</option>
+							<option>Violin</option>
+							<option>Organ</option>
+							<option>Other</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Time Slot:</td>
+					<td>
+						<select id="time" name="time">
+							<option value= "08:00 AM">08:00 AM</option>
+							<option value= "08:30 AM">08:30 AM</option>
+							<option value= "09:00 AM">09:00 AM</option>
+							<option value= "09:30 AM">09:30 AM</option>
+							<option value= "10:00 AM">10:00 AM</option>
+							<option value= "10:30 AM">10:30 AM</option>
+							<option value= "11:00 AM">11:00 AM</option>
+							<option value= "11:30 AM">11:30 AM</option>
+							<option value= "12:00 PM">12:00 PM</option>
+							<option value= "12:30 PM">12:30 PM</option>
+							<option value= "01:00 PM">01:00 PM</option>
+							<option value= "01:30 PM">01:30 PM</option>
+							<option value= "02:00 PM">02:00 PM</option>
+							<option value= "02:30 PM">02:30 PM</option>
+							<option value= "03:00 PM">03:00 PM</option>
+							<option value= "03:30 PM">03:30 PM</option>
+							<option value= "04:00 PM">04:00 PM</option>
+							<option value= "04:30 PM">04:30 PM</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="button" value="Register Student" onclick="registerStudent()"></td>
+					<td><input type="reset"></td>
+				</tr>
+			</table>
+		</form>
+		
+		<div id="display" name="display">
+		</div>
+	</body>
+</html>

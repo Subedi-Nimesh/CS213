@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" href="assign05.css">
+		<title>Haunted House</title>
+		<script src="assign05.js"></script>
+	</head>
+
+	<body>
+
+		<h1>Buy Tickets for Haunted house</h1>
+
+		<form id="purchase" onchange = "getTotalPrice()" style="color: yellow">
+			Children under 13: Free <input type="number" id = "under13" placeholder = "0" style="margin-left:33px;"> </br>
+			Children under 18: $5.00 <input type="number" id = "Children" placeholder = "0" style="margin-left:28px;"> </br>
+			Adults: $10.00 <input type="number" id = "Adults" placeholder = "0" style="margin-left:100px;"> </br>
+			Seniors: $12.00 <input type="number" id = "Senior" placeholder = "0" style="margin-left:95px;"> </br>
+			<input type="reset" value="Clear" onclick="getTotalPrice(true);"> </br>
+		</form>
+		<p> Your TOTAL is: </p>
+		<p id = total></p>
+
+		<form id="payInfo" onsubmit = "return validate()" onreset="reset()" method = "get">
+
+			<p><b>First Name:</b> <p id = "fNameValidate" class = "error"></p> <input type="text" onclick="return validate()" id="firstName" placeholder="First Name"/></p>
+			<p><b>Last Name:</b> <p id = "lNameValidate" class = "error"></p> <input type="text" onchange="return validate()" id="lastName"  placeholder="Last Name"/> </p>
+			<p><b>Address:</b> <p id="adrValidate" class="error"></p> <textarea rows="4" cols="50" onchange="return validate()" id="address" placeholder="Address"></textarea></p>
+			<p><b>Phone:</b> <p id = "phoneValidate" class = "error"></p> <input type="text" onchange="return validate()" id="phone" placeholder="(208)-365-XXXX"/></p>
+
+			<h3>Payment Information</h3>
+			
+			<p>Credit Card Type:
+				<ul class="lightblue" style="color:yellow; list-style-type:none; margin:auto">
+					<li><input type="radio" name="cardType" id="visa" checked>Visa</li>
+					<li><input type="radio" name="cardType" id="master">Master Card</li>
+					<li><input type="radio" name="cardType" id="american">American Express</li>
+				</ul>
+			</p>
+
+			<p><b>Credit Card Number: </b> <p id = "cardNumValidate" class = "error"></p><input type="text" onchange="return validate()" id="cardNumber" placeholder="0000 0000 0000 0000"/></p> 
+
+			<p><b>Credit Card Experation Date: </b>
+			<p id="monthValidationMessage" style="display: none; color: red;">Month is INVALID!</p>
+			<p id="yearValidationMessage" style="display: none; color: red;">Year is INVALID!</p>
+			<input type="text" size="2" maxlength="2" onchange="return validate()" id="cardMonth" placeholder="MM" required="required" />
+			<b style="color: yellow"> - </b>
+			
+			<input type="text" size="4" maxlength="4" onchange="return validate()" id="cardYear"  placeholder="YYYY" required="required" />
+			<br/><br/>
+
+			<input type = "reset">
+			<input type = "submit">
+		</form>
+	</body>
+</html>

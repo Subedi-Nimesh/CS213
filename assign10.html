@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Haunted House</title>
+		<script src="assign10.js"></script>
+	</head>
+
+	<body>
+
+		<h1>Buy Tickets for Haunted house</h1>
+
+		<form id="purchase" >
+			
+		</form>
+
+		<form action="assign10.php" id="payInfo" onsubmit = "validate()" onreset="reset()" onchange = "getTotalPrice()" method = "get">
+
+			<p><b>First Name:</b> <p id = "fNameValidate" class = "error"></p> <input type="text" onclick="return validate()" id="firstName" name="fName" placeholder="First Name"/></p>
+			<p><b>Last Name:</b> <p id = "lNameValidate" class = "error"></p> <input type="text" onchange="return validate()" id="lastName" name="lName" placeholder="Last Name"/> </p>
+			<p><b>Address:</b> <p id="adrValidate" class="error"></p> <textarea rows="4" cols="50" onchange="return validate()" id="address" name="address" placeholder="Address"></textarea></p>
+			<p><b>Phone:</b> <p id = "phoneValidate" class = "error"></p> <input type="text" onchange="return validate()" id="phone" name="phone" placeholder="(208)-365-XXXX"/></p>
+
+			Number of Tickets:<br><br>
+			Children under 12: Free <input type="number" name="under12" id = "under12" placeholder = "0" style="margin-left:33px;"> </br>
+			Children under 18: $5.00 <input type="number" name="child" id = "Children" placeholder = "0" style="margin-left:28px;"> </br>
+			Adults: $10.00 <input type="number" name="adult" id = "Adults" placeholder = "0" style="margin-left:100px;"> </br>
+			Seniors: $12.00 <input type="number" name="senior" id = "Senior" placeholder = "0" style="margin-left:95px;"> </br>
+			<input type="reset" value="Clear" onclick="getTotalPrice(true);"> </br>
+			<p> Your TOTAL is: </p>
+			<p id = total></p><br>
+
+			<h3>Payment Information</h3>
+			
+			<p>Credit Card Type:
+				<ul class="lightblue" style="list-style-type:none; margin:auto">
+					<li><input type="radio" name="cardType" value="Visa" id="visa" checked>Visa</li>
+					<li><input type="radio" name="cardType" value="Master Card" id="master">Master Card</li>
+					<li><input type="radio" name="cardType" value="American Express" id="american">American Express</li>
+				</ul>
+			</p>
+
+			<p><b>Credit Card Number: </b> <p id = "cardNumValidate" class = "error"></p><input type="text" onchange="return validate()" id="cardNumber" placeholder="0000 0000 0000 0000"/></p> 
+
+			<p><b>Credit Card Experation Date: </b>
+			<p id="monthValidationMessage" style="display: none; color: red;">Month is INVALID!</p>
+			<p id="yearValidationMessage" style="display: none; color: red;">Year is INVALID!</p>
+			<input type="text" size="2" maxlength="2" onchange="return validate()" id="cardMonth" name="month" placeholder="MM" required="required" />
+			<b style="color: yellow"> - </b>
+			
+			<input type="text" size="4" maxlength="4" onchange="return validate()" id="cardYear" name="year" placeholder="YYYY" required="required" />
+			<br/><br/>
+
+			<input type = "reset">
+			<input type = "submit">
+		</form>
+	</body>
+</html>

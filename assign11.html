@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Mileage Calculator</title>
+		<script type="text/javascript">
+			
+			function checkFields() {
+				var sCity = document.getElementById("startCity").value;
+				var sState = document.getElementById("startState").value;
+				var eCity = document.getElementById("endCity").value;
+				var eState = document.getElementById("endState").value;
+				var error = false;
+
+				if (sCity == "") { 
+					alert('Please Enter Starting City.');
+					if (!error)
+						document.getElementById("sCity").focus();
+					error = true;
+				} else if (sState == "") { 
+					alert('Please Enter Starting State.');
+					if (!error)
+						document.getElementById("sState").focus();
+					error = true;
+				} else if (eCity == "") { 
+					alert('Please Enter Ending City.');
+					if (!error)
+						document.getElementById("eCity").focus();
+					error = true;
+				} else if (eState == "") { 
+					alert('Please Enter Ending State.');
+					if (!error)
+						document.getElementById("eState").focus();
+					error = true;
+				}
+
+				if (error)
+					return false;
+				return true;
+			}
+
+			function parseJSON(response)
+			{
+				var  place= JSON.parse(response);
+				var count = Object.keys(place).length;
+
+				if (place.trip.miles != "Unknown")
+				{
+					document.getElementById("output").innerHTML += "<br>It is " + place.trip.miles + " miles from " + place.trip.startcity + ", " + place.trip.startstate + " to " + place.trip.endcity + ", " + place.trip.endstate + "<br>";
+					if (place.trip.tmode != undefined)
+					{
+						var list = "";
+						for (var i = 0; i < Object.keys(place.trip.tmode).length; i++)
+						{
+							if (i != place.trip.tmode.length - 1)
+								list += place.trip.tmode[i] + ", ";
+							else
+								list += "or " + place.trip.tmode[i];
+
+						}
+						document.getElementById("output").innerHTML += "The mode of Transportation are " + list + ".<br><br>";
+
+					}
+					else
+						document.getElementById("output").innerHTML += "The mode of Transportation from " + place.trip.startcity + ", " + place.trip.startstate + " to " + place.trip.endcity + ", " + place.trip.endstate + " is unknown<br><br>";
+				}
+				else
+					document.getElementById("output").innerHTML += "<br>The Distance from " + place.trip.startcity + ", " + place.trip.startstate + " to " + place.trip.endcity + ", " + place.trip.endstate + " is unknown.<br><br>";
+			}
+
+			function importURL() {
+				if (checkFields()) {
+					var url = "http://157.201.194.254/cgi-bin/cs213/mileageAjaxJSON" + "?startCity=" + document.getElementById("startCity").value + "&startState=" + document.getElementById("startState").value + "&endCity=" + document.getElementById("endCity").value + "&endState=" + document.getElementById("endState").value;
+
+					var request = new XMLHttpRequest();
+					request.onreadystatechange = alertContents;
+					request.open('GET', url, true);
+					request.send();
+				}
+			}
+		
+			function alertContents() 
+			{
+				if (this.readyState == 4)
+				{ 
+					if (this.status == 200)
+					{
+						var response = this.responseText;
+						parseJSON(response);                            
+					}
+					else 
+					{
+						alert('Error detected.');
+					}
+				}
+			}
+			
+		</script>
+	</head>
+	<body style="background-color: aqua">
+		<header>
+			<h1>Mileage Calculator</h1>
+		</header>
+		<div id="main">
+			<form onsubmit="return false;">
+				<table border="1" style="background-color: lightgrey;">
+					<tr>
+						<td>Start city: <input type="text" name="startCity" id="startCity" placeholder="Salt Lake City"></td>
+						<td>End city: <input type="text" name="endCity" id="endCity" placeholder="Boise"></td>
+					</tr>
+				
+					<tr>
+						<td>Start state: <input type="text" maxlength="2" size="2" name="startState" id="startState" placeholder="UT"></td>
+						<td>End state: <input type="text" maxlength="2" size="2" name="endState" id="endState" placeholder="ID"></td>
+					</tr>
+					<tr>
+						<td><button onclick="importURL()">Calculate Mileage</button></td>
+						<td><button onclick="reset()">Reset</button></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+    	<div id="output">
+		</div>
+	</body>
+</html>

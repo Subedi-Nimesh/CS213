@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="external04.css">
+    <script src="assign04.js"></script>
+    <title>Mortgage Calculator</title>
+</head>
+    <body style="background-image:url('bkground.jpg'); height = 100%;
+        background-position: center; background-repeat: no-repeat;
+        background-size: cover;">
+        <form action = "" style="float: right; margin-right: 30rem;">
+            <fieldset style="border: 5px solid black; font-size:90%; text-align:left; width: 90%">
+                <table>
+                    <legend><h1>Mortgage Calculator</h1></legend>
+                    <tr>
+                    <td><p>APR:</p></td>
+                    <td><input type="text" id="apr" placeholder="0.01% - 25.00%"></td>
+                    </tr>
+
+                    <tr>
+                        <td><p>Loan Term:</p></td>
+                        <td><input type="text" id="loanTerm" placeholder="1 year - 40 years"></td>
+                    </tr>
+
+                    <tr>
+                        <td><p>Loan Amount:</p></td>
+                        <td><input type="text" id="loanAmount" placeholder="$500 or More"></td>
+                    </tr>
+
+                    <tr>
+                        <td><p>Montly Payment:</p></td>
+                        <td><div type="text" style="background: white" id = "monthlyPayment"></div></td>
+                    </tr>
+
+                    <tr style="text-align: center;">                  
+                        <td><input type="button" onclick="calculatePayment()" value="Calculate"/></td>
+                        <td><input type="button" onclick="resetValues()" value="Reset"/></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </body>
+</html>

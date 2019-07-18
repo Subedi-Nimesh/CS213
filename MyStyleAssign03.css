@@ -1,0 +1,66 @@
+	.navbar 
+	{
+		overflow: hidden;
+		background-color: #333;
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		top: 0;
+		width: 100%;
+	}
+	
+	.navbar a 
+	{
+		float: center;
+		font-size: 18px;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	
+	.navbar a:hover
+	{
+		background-color: maroon;
+	}
+
+	.top-container {
+	  background-color: black;
+	  padding: 30px;
+	  text-align: center;
+	}
+
+	.header {
+	  padding: 10px 16px;
+	  background: black;
+	  color: maroon;
+	}
+
+	.content {
+	  padding: 16px;
+	}
+
+	.sticky {
+	  position: fixed;
+	  top: 0;
+	  width: 100%;
+	}
+
+	.sticky + .content {
+	  padding-top: 102px;
+	}
+	
+	a {
+    		color: yellow;
+	}
+	
+	body {
+    	height=100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		color:white;
+	}
+	
+	h1 {
+    	color: blue;
+	}

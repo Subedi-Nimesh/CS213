@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Directory</title>
+		<script type="text/javascript">
+		
+			function directoryRequest()
+			{
+				console.log("request()!");
+				var url = "http://157.201.194.254/~nsubedi/assign09.php";
+
+				var httpRequest = new XMLHttpRequest();
+				httpRequest.onreadystatechange = alertContents;
+				httpRequest.open("GET", url, true);
+				httpRequest.send();
+			}
+
+
+			function alertContents() 
+			{
+				if (this.readyState == 4)
+				{
+					if (this.status == 200)
+					{
+						var myText = this.responseText;
+						parseJSON(myText);
+					}
+					else 
+						alert('Error processing the request.');
+				}
+			}
+
+			function parseJSON(myText)
+			{
+				var obj = JSON.parse(myText);
+				console.log(obj);
+				var number = Object.keys(obj).length;
+				console.log("Length is " + Object.keys(obj).length);
+
+				console.log(number);
+
+				var list = "<table border = '1' id=\"directory\"><tr><th>Filename</th><th>Type</th><th>CWD</th><th>Action</th></tr>";
+
+				for (var i = 0; i < number - 1; i++)
+				{
+					list += "<tr><td>" + obj[i].fileName + "</td><td>" + obj[i].fileType + "</td><td>" + obj[i].cwd +"</td>";
+
+					if (obj[i].fileType == "file")
+					{
+						list += "<td><button onclick=\"window.location='" + obj[i].fileName + "'\">Click here</button></td>";
+					}
+				}
+
+				document.getElementById("list").innerHTML = list;
+			}
+
+		</script>
+	</head>
+	<body>
+		<h1>List of all the Directory</h1>
+		<button onclick="directoryRequest()">Click to display</button>
+		<div id="list"></div>
+	</body>
+</html>

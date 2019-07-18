@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Top 10 Cities</title>
+		<script type="text/javascript" src="assign08.js"></script>
+		<link rel="stylesheet" type="text/css" href="assign08.css"></link>
+	</head>
+	<body>
+		<header>
+			<h1>Countries & Students</h1>
+		</header>
+		<h2>Ten Largest Cities Of</h2>
+		<div>
+			<select id="countries" onchange="makeRequest()">
+				<option>Choose a Country</option>
+				<option value="usa">United States</option>
+				<option value="mexico">Mexico</option>
+				<option value="canada">Canada</option>
+				<option value="russia">Russia</option>
+			</select><br>
+			<p id="population"></p>
+		</div>
+		<div>
+			<h2>JSON File</h2>
+			<input type="text" id="jsonInput" value="json.txt" /><br/>
+			<button onclick="readFile()">Load</button>
+			<p id="display"></p>
+		</div>
+		<footer style="text-align: right;">Thank you</footer>
+	</body>
+</html>
