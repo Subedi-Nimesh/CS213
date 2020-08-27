@@ -1,0 +1,586 @@
+{ "menu" :
+  [
+    {
+      "category": "Appetizers",
+      "name": "Papadam",
+      "price": 1.95,
+      "description": "Thin lentil wafers seasoned with spices and cooked in tandoori oven."
+    },
+    {
+      "category": "Appetizers",
+      "name": "Vegetable Samosa",
+      "price": 3.95,
+      "description": "Deep fried wrapped potatoes, green beans, and spices."
+    },
+    {
+      "category": "Appetizers",
+      "name": "Lamb Samosa",
+      "price": 5.95,
+      "description": "Minced Lamb with onions, peas, with spices wrapped in pastry dough and fried."
+    },
+    {
+      "category": "Appetizers",
+      "name": "Onion Bhaji",
+      "price": 4.95,
+      "description": "Sliced onions dipped in chickpeas batter and fried."
+    },
+    {
+      "category": "Appetizers",
+      "name": "Vegetable Pakora",
+      "price": 4.95,
+      "description": "Cut vegetables in chickpeas dough and fried."
+    },
+    {
+      "category": "Appetizers",
+      "name": "Paneer Pakora",
+      "price": 5.95,
+      "description": "Homemade fried cottage cheese in chickpeas batter."
+    },
+    {
+      "category": "Appetizers",
+      "name": "Chicken Pakora",
+      "price": 6.95,
+      "description": "Chicken pieces dipped in chickpeas batter and fried."
+    },
+    { 
+      "category": "Appetizers",
+      "name": "Fish Pakora",
+      "price": 7.95,
+      "description": "Fish pieces dipped in chickpeas batter and fried."
+    },
+    {  
+      "category": "Appetizers",
+      "name": "Gurkhas Chili Bhaji",
+      "price": 4.95,
+      "description": "Spicy fried green chillies in chickpeas batter and with spices."
+    },
+    { 
+      "category": "Appetizers",
+      "name": "Vegetable Platter",
+      "price": 9.95,
+      "description": "Chef's choice of 2 Veg. Samosa, 2 Veg. Pakora, 2 Aloo Pakora with Onion Bhaji"
+    },
+    { 
+      "category": "Appetizers",
+      "name": "Samosa Chat",
+      "price": 6.95,
+      "description": "Smashed vegetable samosa with fresh cilantro, chunk onions with the mix taste of yogurt, tamarind, and mint (served cold)."
+    },
+    {
+      "category": "Appetizers",
+      "name": "Chicken Sekuwa",
+      "price": 8.95,
+      "description": "Chicken thigh meat marinated in olive oil and spices, barbequed."
+    },
+    {
+      "category": "Soup & Salad",
+      "name": "Daal Soup",
+      "price": 4.95,
+      "description": "Yellow lentils soup with potatoes, ginger, garlic, cilantro, and spices."
+    },
+    {
+      "category": "Soup & Salad",
+      "name": "Chicken Dal Soup",
+      "price": 5.95,
+      "description": "Soup cooked with chicken stock, green peas, ginger, garlic, and spices."
+    },
+    {
+      "category": "Soup & Salad",
+      "name": "Vegetable Sweet Corn Soup",
+      "price": 4.95,
+      "description": "Mixed vegetables and sweet corn with ginger, garlic, cilantro, and spices."
+    },
+    {
+      "category": "Soup & Salad",
+      "name": "Green Salad",
+      "price": 4.95,
+      "description": "Lettuce, red bell pepper, carrot, cucumber, celery, tomato, olive."
+    },
+    {
+      "category": "Accompaniment",
+      "name": "Raita",
+      "price": 3.95,
+      "description": "A traditional condiment made by flavoring yogurt with cucumber, cumin, and mint."
+    },
+    {
+      "category": "Accompaniment",
+      "name": "Mixed Pickle",
+      "price": 3.95,
+      "description": "Mixed pickle with vegetables and spices."
+    },
+    {
+      "category": "Bread Special",
+      "name": "Naan",
+      "price": 1.95,
+      "description": "Wheat bread with yogurt, milk, sugar, and salt baked in clay tandoori oven."
+    },
+    {
+      "category": "Bread Special",
+      "name": "Garlic Naan",
+      "price": 2.95,
+      "description": "Naan bread baked in clay tandoori oven topped with garlic."
+    },
+    {
+      "category": "Bread Special",
+      "name": "Onion Naan",
+      "price": 2.95,
+      "description": "Onion stuffed naan bread cooked in clay tandoori oven."
+    },
+    {
+      "category": "Bread Special",
+      "name": "Coconut Naan",
+      "price": 4.95,
+      "description": "Coconut stuffed naan bread cooked in clay tandoori oven."
+    },
+    {
+      "category": "Bread Special",
+      "name": "Roti (v)",
+      "price": 1.95,
+      "description": "Whole wheat plain bread with oil and salt baked in clay tandoori oven."
+    },
+    {
+      "category": "Bread Special",
+      "name": "Aloo Paratha (v)",
+      "price": 3.95,
+      "description": "Whole wheat bread stuffed with potatoes, peas, spices, vegetable oil, and salt baked in tandoori oven"
+    },
+    {
+      "category": "Bread Special",
+      "name": "Cheese Naan",
+      "price": 3.95,
+      "description": "Cheese stuffed naan bread cooked in clay tandoori oven."
+    },
+    {
+      "category": "Bread Special",
+      "name": "Sweet Naan",
+      "price": 4.95,
+      "description": "Cashew, raisin, cherry stuffed naan bread cooked in clay tandoori oven."
+    },
+    {
+      "category": "Bread Special",
+      "name": "Bread Basket",
+      "price": 9.95,
+      "description": "Assorted basket of sweet naan, garlic naan, onion naan, and cheese naan."
+    },
+    {
+      "category": "Vegetable Specialties",
+      "name": "Yellow Daal (v)",
+      "price": 10.95,
+      "description": "Yellow lentil curry, oil tempered ginger,garlic and cumin seeds in tomato, and spices."
+    },
+    {
+      "category": "Vegetable Specialties",
+      "name": "Daal Makhani",
+      "price": 10.95,
+      "description": "Black lentils with ginger, garlic, cumin seeds, and spices with the taste of ghee."
+    },
+    {
+      "category": "Vegetable Specialties",
+      "name": "Veg Coconut Korma (v)",
+      "price": 12.95,
+      "description": "Mixed vegetables cooked with mild coconut creamy sauce with cashew nuts."
+    },
+    {
+      "category": "Vegetable Specialties",
+      "name": "Aloo Saag (v)",
+      "price": 11.95,
+      "description": "Spinach and potato cube cooked with tomato, ginger, garlic, cilantro and curry spices."
+    },
+    {
+      "category": "Vegetable Specialties",
+      "name": "Bhindi Aloo (v)",
+      "price": 11.95,
+      "description": "Okra and potatoes with sliced onion, cilantro, ginger, garlic and spices."
+    },
+    {
+      "category": "Vegetable Specialties",
+      "name": "Baingan Bharta (v)",
+      "price": 11.95,
+      "description": "A classic Indian dish, eggplant roasted, blended and tempered with aromatic herbs and spices."
+    },
+    {
+      "category": "Vegetable Specialties",
+      "name": "Aloo Govi (v)",
+      "price": 11.95,
+      "description": "Potato cube with cauliflower cooked with ginger, garlic, onion, tomato, cilantro and curry spices."
+    },
+    {
+      "category": "Vegetable Specialties",
+      "name": "Aloo Mattar curry (v)",
+      "price": 10.95,
+      "description": "Cube potatoes and green peas cooked with onion, cilantro, ginger, garlic, tomato, and spices."
+    },
+    {
+      "category": "Vegetable Specialties",
+      "name": "Navaratna Korma",
+      "price": 12.95,
+      "description": "Mixed vegetables cooked with creamy sauce with touch of tomatoes and cashew nuts."
+    },
+    {
+      "category": "Vegetable Specialties",
+      "name": "Paneer Tikka Masala",
+      "price": 12.95,
+      "description": "Cube cottage cheese in tomato creamy sauce with cashew nuts powder."
+    },
+    {
+      "category": "Vegetable Specialties",
+      "name": "Chana Masala (v)",
+      "price": 11.95,
+      "description": "Garbanzo beans cooked with onion, cilantro, tomato and curry spices."
+    },
+    {
+      "category": "Vegetable Specialties",
+      "name": "Malai Kofta",
+      "price": 12.95,
+      "description": "A vegetable balls prepared from dough of cashew nuts, cottage cheese, raisins then summered in a creamy sauce."
+    },
+    {
+      "category": "Vegetable Specialties",
+      "name": "Vegetable Kofta (v)",
+      "price": 12.95,
+      "description": "A vegan dish of vegetable balls prepared from mixed vegetables, tofu, cilantro and spices cooked in coconut milk with nuts and raisins."
+    },
+    {
+      "category": "Vegetable Specialties",
+      "name": "Saag Paneer",
+      "price": 12.95,
+      "description": "Spinach and homemade cottage cheese cooked with creamy sauce and spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Chicken Curry",
+      "price": 12.95,
+      "description": "Chicken cooked with ginger, garlic, onion, tomatoes, cilantro, and spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Chicken Vindaloo",
+      "price": 12.95,
+      "description": "Chicken with potatoes in sweet and sour sauce with tomato, cilantro, ginger, garlic, and spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Chili Chicken",
+      "price": 12.95,
+      "description": "Pan fried chicken thigh meat curry with bell pepper, onion, soy sauce, ketchup, and spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Chicken Tikka Masala",
+      "price": 13.95,
+      "description": "Breast chicken barbequed and cooked with creamy sauce with tomatoes and cashew nuts."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Butter Chicken",
+      "price": 13.95,
+      "description": "Chicken thigh meat with creamy tomato sauce, cashew nuts, and butter with spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Chicken Coconut Korma",
+      "price": 13.95,
+      "description": "Breast chicken cooked with onion, tomatoes, coconut milk and cashew nuts."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Chicken Korma",
+      "price": 13.95,
+      "description": "Chicken curry with creamy sauce, cashew nuts, and spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Chicken Saag",
+      "price": 12.95,
+      "description": "Chicken cooked with spinach, tomato, ginger, garlic, cilantro and curry spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Goat Curry (bone in)",
+      "price": 14.95,
+      "description": "Bone-in cubed goat cooked with cumin, fenugreek, ginger, garlic, cilantro, and spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Lamb Curry",
+      "price": 14.95,
+      "description": "Cubed lamb cooked with ginger, garlic, tomatoes, cilantro, and curry spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Lamb Vindaloo",
+      "price": 14.95,
+      "description": "Cubed lamb cooked with potatoes in sweet and sour sauce with tomatoes, cilantro, ginger, garlic, and spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Lamb Kofta Curry",
+      "price": 14.95,
+      "description": "Ground lamb kofta ball with curry spices cooked in tomato, onion, cashew nuts, and yogurt."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Lamb Korma",
+      "price": 15.95,
+      "description": "Cubed lamb cooked in a creamy curry with ginger, garlic, onion, tomatoes, cashew nuts, raisins, and spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Lamb Coconut Korma",
+      "price": 15.95,
+      "description": "Cubed lamb cooked in coconut based curry with ginger, garlic, onion, tomatoes, cashew nuts, raisins, and spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Lamb Tikka Masala",
+      "price": 15.95,
+      "description": "Cubed lamb barbequed and cooked with creamy tomato sauce and cashew nuts powder with spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Lamb Butter",
+      "price": 15.95,
+      "description": "Sliced lamb meat cooked in butter sauce with cream, tomatoes, cashew powder, and spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Lamb Saag",
+      "price": 14.95,
+      "description": "Lamb cube cooked with spinach, tomato, ginger, garlic, cilantro and curry spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Fish Curry",
+      "price": 15.95,
+      "description": "Fish cooked with ginger, garlic, tomatoes, cilantro, and curry spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Shrimp Curry",
+      "price": 15.95,
+      "description": "Shrimp cooked with ginger, garlic, onion, tomatoes, cilantro, and spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Shrimp Tikka Masala",
+      "price": 16.95,
+      "description": "Shrimp barbequed and cooked with tomatoes, creamy sauce with cashew nuts powder, and spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Shrimp Coconut Korma",
+      "price": 16.95,
+      "description": "Sliced shrimp cooked with tomatoes, onion in coconut milk, and cashew nuts."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Shrimp Korma",
+      "price": 16.95,
+      "description": "Shrimp cooked in creamy curry with ginger, garlic, onion, tomatoes, cashew nuts, raisins, and spices."
+    },
+    {
+      "category": "Non Veg Curry Special",
+      "name": "Shrimp Saag",
+      "price": 15.95,
+      "description": "Shrimp cooked with spinach, tomato, ginger, garlic, cilantro, and curry spices."
+    },
+    {
+      "category": "Tandoori Special",
+      "name": "Chicken Tandoori (7 pieces)",
+      "price": 14.95,
+      "description": "Chicken leg quarters with the marinated with yogurt, milk and spices then barbequed."
+    },
+    {
+      "category": "Tandoori Special",
+      "name": "Chicken Tikka (6 pieces)",
+      "price": 15.95,
+      "description": "Chicken breast meat chunk marinated with yogurt, milk, oil and spiced then barbequed."
+    },
+    {
+      "category": "Tandoori Special",
+      "name": "Lamb Sish Kebob",
+      "price": 17.95,
+      "description": "Lamb ground meat with tandoori spices, cilantro, ginger, garlic in vegetable oil then barbequed."
+    },
+    {
+      "category": "Tandoori Special",
+      "name": "Mix Special Grill",
+      "price": 22.95,
+      "description": "Chicken leg 2, chicken tikka 2, shrimp 2, fish tikka 2 and the barbequed vegetables served in sizzeler."
+    },
+    {
+      "category": "Tandoori Special",
+      "name": "Shrimp Tandoori",
+      "price": 19.95,
+      "description": "Shrimp marinated with yogurt, milk, vegetable oil with tandoori spices then barbequed, served in sizzeler."
+    },
+    {
+      "category": "Gurkhas Specialties",
+      "name": "Vegetable Momo (v)",
+      "price": 11.95,
+      "description": "Wheat-wrapped vegetable dumpling with ginger, garlic, cilantro, onion, tomatoes, and spices."
+    },
+    {
+      "category": "Gurkhas Specialties",
+      "name": "Chicken Momo",
+      "price": 12.95,
+      "description": "Wheat-wrapped chicken dumpling with ginger, garlic, cilantro, onion, tomatoes, butter, and spices."
+    },
+    {
+      "category": "Gurkhas Specialties",
+      "name": "Lamb Momo",
+      "price": 13.95,
+      "description": "Wheat-wrapped lamb dumpling with ginger, garlic, cilantro, onion, tomatoes, butter, and spices."
+    },
+    {
+      "category": "Gurkhas Specialties",
+      "name": "Sweet Momo",
+      "price": 12.95,
+      "description": "Wheat-wrapped dumpling with unrefined brown sugar, nuts, raisins, and coconut."
+    },
+    {
+      "category": "Gurkhas Specialties",
+      "name": "Vegetable Chow Mein (v)",
+      "price": 11.95,
+      "description": "Wheat noodles with mixed vegetables, ginger, garlic, tomatoes, ketchup, soy sauce, and spices."
+    },
+    {
+      "category": "Gurkhas Specialties",
+      "name": "Chicken Chowmein",
+      "price": 12.95,
+      "description": "Wheat noodles with chicken meat, onions, cilantro, tomatoes, and spices."
+    },
+    {
+      "category": "Gurkhas Specialties",
+      "name": "Lamb Chowmein",
+      "price": 13.95,
+      "description": "Wheat noodles with lamb meat, onions, cilantro, tomatoes, and spices."
+    },
+    {
+      "category": "Gurkhas Specialties",
+      "name": "Shrimp Veg. Chowmein",
+      "price": 18.95,
+      "description": "Wheat noodles with shrimp, onion, cilantro, tomatoes, and spices."
+    },
+    {
+      "category": "Kids Menu",
+      "name": "Kids Meal",
+      "price": 7.95,
+      "description": "French Fries, 2 Paneer Pakora, Mango Pudding, and Rice served with ketchup."
+    },
+    {
+      "category": "Kids Menu",
+      "name": "Sweet Momo (6 pieces)",
+      "price": 5.95,
+      "description": "Wheat wrapped dumplings with coconut, sugar, raisins, cashew nuts, and cherries."
+    },
+    {
+      "category": "Rice Specialties",
+      "name": "Basmati Rice/Brown Rice",
+      "price": 2.95,
+      "description": "Steamed cooked plain basmati rice or brown rice."
+    },
+    {
+      "category": "Rice Specialties",
+      "name": "Pilav Rice",
+      "price": 8.95,
+      "description": "Basmati rice cooked with cashew nuts, raisins, peas, carrots, onion, and potatoes."
+    },
+    {
+      "category": "Rice Specialties",
+      "name": "Vegetable Biryani (v)",
+      "price": 11.95,
+      "description": "Basmati rice with cashew nuts, onion, peas, tomatoes, cilantro, and biryani spices."
+    },
+    {
+      "category": "Rice Specialties",
+      "name": "Chicken Biryani",
+      "price": 12.95,
+      "description": "Basmati rice with cashew nuts, onion, peas, tomatoes, cilantro, chicken meat, and biryani spices."
+    },
+    {
+      "category": "Rice Specialties",
+      "name": "Lamb Biryani",
+      "price": 13.95,
+      "description": "Basmati rice with lamb meat, cashew nuts, onion, peas, tomatoes, cilantro, and spices."
+    },
+    {
+      "category": "Rice Specialties",
+      "name": "Goat Biryani",
+      "price": 13.95,
+      "description": "Basmati rice with bone in goat meat, cashew nuts, onion, peas, tomatoes, cilantro, and spices."
+    },
+    {
+      "category": "Desserts",
+      "name": "Rice Pudding",
+      "price": 3.95,
+      "description": "Rice pudding with milk, cashew nuts, raisins, sugar, coconut, and spices."
+    },
+    {
+      "category": "Desserts",
+      "name": "Mango Rice Pudding",
+      "price": 3.95,
+      "description": "Rice pudding with mango, milk, cashew nuts, raisins, coconut, and spices."
+    },
+    {
+      "category": "Desserts",
+      "name": "Mango Pudding",
+      "price": 3.95,
+      "description": "Mango pulp with vanilla pudding and sugar."
+    },
+    {
+      "category": "Desserts",
+      "name": "Chocolate Walnut Pudding",
+      "price": 4.95,
+      "description": "Chocolate vanilla pudding with walnuts and sugar."
+    },
+    {
+      "category": "Desserts",
+      "name": "Ras Malai",
+      "price": 4.95,
+      "description": "Indian cottage cheese soaked in thickened cream, sweetened and flavored milk."
+    },
+    {
+      "category": "Desserts",
+      "name": "Gulab Jamun",
+      "price": 3.95,
+      "description": "Sweet milk balls made from milk powder, flour, cardamom, and spices in sugar syrup."
+    },
+    {
+      "category": "Desserts",
+      "name": "Mango Kulfi",
+      "price": 4.95,
+      "description": "Traditional Mango flavored indian ice cream made with milk, cashews, pistachios, coconuts, cardamom, and sugar."
+    },
+    {
+      "category": "Desserts",
+      "name": "Pistachio Kulfi",
+      "price": 4.95,
+      "description": "Traditional Pistachio flavored indian ice cream made with milk, cashews, pistachios, coconuts, cardamom, and sugar."
+    },
+    {
+      "category": "Desserts",
+      "name": "Strawberry Coconut (v)",
+      "price": 4.95,
+      "description": "Traditional Strawberry flavored indian ice cream made with coconut milk, cashews, pistachios, coconuts, cardamom, and sugar."
+    },
+    {
+      "category": "Drinks",
+      "name": "Lassi",
+      "price": 3.95,
+      "description": "Mango, Strawberry, Banana, Sweet"
+    },
+    {
+      "category": "Drinks",
+      "name": "Tea",
+      "price": 3,
+      "description": "Spicy Chai Tea, Jasmine, Herbal, Green"
+    },
+    {
+      "category": "Drinks",
+      "name": "Soft Drink",
+      "price": 2,
+      "description": "Coke, Diet Coke, Sprite, Dr. Pepper, Lemonade, Root Beer"
+    }
+  ]
+}

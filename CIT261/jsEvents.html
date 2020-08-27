@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="jsEvents.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>JS Events</title>
+</head>
+<body id="backColor" onload="onLoad()">
+    <h1>JavaScript Events and Animations</h1>
+    <hr size="4" color="black">
+    <br>
+    <div style="text-align: left;">
+        A JavaScript can be executed when an event occurs, like when a user clicks on an HTML element.<br>
+        To execute code when a user clicks on an element, add JavaScript code to an HTML event attribute:<br><br>
+        onclick=JavaScript<br><br>        
+        Examples of HTML events:
+        <ol>
+            <li>When a user clicks the mouse</li>
+            <li>When a web page has loaded</li>
+            <li>When an image has been loaded</li>
+            <li>When the mouse moves over an element</li>
+            <li>When an input field is changed</li>
+            <li>When an HTML form is submitted</li>
+            <li>When a user strokes a key</li>
+        </ol>
+        <br><br>
+        
+        <div>
+            <h3>onClick Event</h3>
+            <div id="clicker" style="background-color:hotpink;width:150px;height:150px;padding:40px;" onclick="onClick()">Click Me Many Times!</div>
+        </div>
+        <div>
+            <h3>onMouseOver</h3>
+            <div style="background-color:Red;width:150px;height:150px;padding:40px;" onmouseover="mOver()">Mouse has entered <span id="countOver"></span> times.</div>
+        </div>
+        <div>
+            <h3>onMouseOut</h3>
+            <div style="background-color:yellow;width:150px;height:150px;padding:40px;" onmouseout="mOut()">Mouse has left <span id="countOut"></span> times.</div>
+        </div><br>
+        <h3>onMouseDown and onMouseUp</h3>
+        <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+            style="background-color:#00ffbb;width:150px;height:150px;padding:40px;">
+            Click this!
+        </div>
+        
+        <h3>onChange Event</h3>
+        How would you like to pay:
+        <select id="payment" onchange="changingPayment()">
+            <option value="Nothing Selected">Payment Method</option>
+            <option value="Cash">Cash</option>
+            <option value="Check">Check</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Debit Card">Debit Card</option>
+            <option value="Apple Pay">Apple Pay</option>
+            <option value="Samsung Pay">Samsung Pay</option>
+        </select>
+        <p>You are paying with: <span id="paymentMethod">Nothing Selected</span>!</p>
+        <div>
+            <h3>Keyboard events</h3>
+            <h4>onKeyDown and onKeyUp</h4>
+            Enter your First Name:
+            <input type="text" id="keyDown" onkeydown="kDown()"><br>
+            <div id="keyDownText"></div>
+            Enter your Last Name:
+            <input type="text" id="keyUp" onkeyup="kUp()"><br>
+            <div id="keyUpText"></div>
+            <p>The values for the keyDown refreshes every time a key is pressed.<br> The values for the keyUp refreshes every time a key is released.<br> We can also use onChange Event for keyboard inputs</p>
+        </div>
+
+
+        
+    </div>
+</body>
+</html>

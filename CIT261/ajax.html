@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="ajax.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Ajax Request</title>
+</head>
+<body>
+    <h1>JSON File</h1>
+    <hr size="4" color="black">
+    <div style="text-align: left;">
+        <h3>AJAX Request</h3>
+            AJAX = Asynchronous JavaScript And XML.<br>
+            AJAX is not a programming language.<br>
+            AJAX just uses a combination of:<br>
+            A browser built-in XMLHttpRequest object (to request data from a web server)<br>
+            JavaScript and HTML DOM (to display or use the data)<br><br>
+            Using AJAX We can:
+            <ol>
+                <li>Read data from a web server - after the page has loaded</li>
+                <li>Update a web page without reloading the page</li>
+                <li>Send data to a web server - in the background</li>
+            </ol>
+        
+        Code to connect to the Server:<br>
+        var xhttp = new XMLHttpRequest();<br>
+        xhttp.onreadystatechange = function() {<br>
+            if (this.readyState == 4 && this.status == 200) {<br>
+            document.getElementById("demo").innerHTML = this.responseText;<br>
+            }<br>
+        };<br>
+        xhttp.open("GET", "ajax_info.txt", true);<br>
+        xhttp.send();<br><br>
+
+        Example:<br>
+        <input type="text" id="jsonInput" value="json.txt"/>
+        <button onclick="readFile()">Load</button><br>
+        <p id="display"></p>
+    </div>
+</body>
+</html>

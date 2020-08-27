@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>HTML5 Documents</title>
+    <script>
+        function loaded(){
+            document.getElementById("vid").style.visibility = "hidden";
+            document.getElementById("aud").style.visibility = "hidden";
+        }
+
+        function clickedVideo()
+        {
+            document.getElementById("vid").style.visibility = "visible";
+            document.getElementById("aud").style.visibility = "hidden";
+        }
+
+        function clickedAudio()
+        {
+            document.getElementById("aud").style.visibility = "visible";
+            document.getElementById("vid").style.visibility = "hidden";
+        }
+    </script>
+</head>
+<body onload="loaded()">
+    <h1>HTML5 tags</h1>
+    <hr size="4" color="black">
+
+    <div style="text-align: left;">
+    <h3>Video:</h3>
+    The video tag can be used to play clips in the webpage.<br>
+    It has different attribute to make it look better.<br><br>
+
+    Example:<br>
+    <button onclick="clickedVideo()">Click here for Video</button>
+    <div id="vid">
+        <video width="320" height="240" controls>
+                <source src="funnyVideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+        </video>
+    </div>
+    Code of Video:<br><br>
+    <'video width="320" height="240" controls><br>
+            <'source src="funnyVideo.mp4" type="video/mp4"><br>
+            Your browser does not support the video tag.<br>
+    <'/video>
+    <br><br>
+    <h3>Audio:</h3>
+    The Audio tag can be used to play audio in the webpage.<br>
+    It has different attribute to make the controls look better with functions.<br><br>
+    
+    Example:<br>
+        <button onclick="clickedAudio()">Click here for Audio</button>
+       
+        <div id="aud">
+            <audio controls>
+                <source src="Memories.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    Code of Audio:<br><br>
+    <'audio controls><br>
+            <'source src="Memories.mp3" type="audio/mp3"><br>
+            Your browser does not support the audio element.<br>
+        <'/audio>
+    </div>
+</body>
+</html>
