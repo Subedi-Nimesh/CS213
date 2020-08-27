@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="BasicJS.js"></script>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <title>CSS3 Transition</title>
+  <style> 
+    #transition {
+      width: 100px;
+      height: 100px;
+      background: red;
+      -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+      transition: width 2s;
+    }
+  
+    #transition:hover {
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+    <h1>CSS3 Transition</h1>
+    <hr size="4" color="black">
+    <br>
+    <div style="text-align: left;">
+
+      CSS transitions allows you to change property values smoothly, over a given duration.<br>
+      To create a transition effect, you must specify two things:<br><br>
+
+      the CSS property you want to add an effect to the duration of the effect<br>
+      Note: If the duration part is not specified, the transition will have no effect, because the default value is 0.<br>     
+<p>Hover over the div element below, to see the transition effect:</p>
+<div id="transition"></div>
+
+</body>
+</html>

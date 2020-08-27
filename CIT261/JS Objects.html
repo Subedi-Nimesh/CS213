@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="JS Objects.js"></script>
+    <title>JS Objects</title>
+</head>
+<body onload="onLoad()">
+  <h1>JavaScript Objects</h1>
+  <hr size="4" color="black">
+    
+  <div style="text-align: left;">
+    JavaScript variables are containers for data values.<br>
+    Objects are variables too. But objects can contain many values.<br>
+    The values are written as name:value pairs (name and value separated by a colon).<br>
+    Objects can also have methods.<br>
+    Methods are actions that can be performed on objects.<br>
+    In a function definition, this refers to the "owner" of the function.<br><br>
+
+    <div id="text"></div><br><br>
+    The above text was created using JavaScript Objects.<br><br>
+    The code for it is:<br>
+
+    var owner = {<br>
+    firstName   : "Nimesh",<br>
+    lastName    : "Subedi",<br>
+    age         : 21,<br>
+    hometown    : "Kathmandu",<br>
+    country     : "Nepal",<br>
+    major       : "Software Engineering",<br>
+    college     : "BYU-Idaho",<br>
+    };<br><br>
+    function onLoad() {<br>
+    let info = `Hi, My Name is ${owner.firstName} ${owner.lastName}, I am ${owner.age} years old.<br>
+    I was born in ${owner.hometown}, ${owner.country}. I am currently studying ${owner.major} in ${owner.college}.
+    It was nice to meet you.`;<br>
+    document.getElementById("text").innerHTML = info;<br>
+    }<br><br><br>
+  </div>
+</body>
+</html>
